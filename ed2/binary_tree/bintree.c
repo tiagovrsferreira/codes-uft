@@ -44,3 +44,46 @@ bool BinTree_insert(BinTree* tree, int key) {
     }
     return true;
 }
+
+Node* BinTree_search(Node* root, int key) {
+    Node* node = root;
+
+    while(node->key != key && node != NULL) {
+        if(key < node->key)
+            node = node->left;
+        else node = node->right;
+    }
+    return node;
+}
+
+Node* BinTree_search_r(Node* node, int key) {
+    if(node == NULL || key == node->key) 
+        return node;
+    if(key < node->key)
+        return BinTree_search_r(node->left, key);
+    else return BinTree_search_r(node->right, key);
+}
+
+void BinTree_pre(Node* node) {
+    if(node != NULL) {
+        printf("%d ", node->key);
+        BinTree_pre(node->left);
+        BinTree_pre(node->right);
+    }
+}
+
+void BinTree_in(Node* node) {
+    if(node != NULL) {
+        BinTree_in(node->left);
+        printf("%d ", node->key);
+        BinTree_in(node->right);
+    }
+}
+
+void BinTree_pos(Node* node) {
+    if(node != NULL) {
+        BinTree_pos(node->left);
+        BinTree_pos(node->right);
+        printf("%d ", node->key);
+    }
+}
