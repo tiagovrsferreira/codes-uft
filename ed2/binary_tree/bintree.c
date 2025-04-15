@@ -23,6 +23,7 @@ BinTree* BinTree_create() {
 bool BinTree_insert(BinTree* tree, int key) {
     Node *new_node = Node_create(key);
     if(new_node == NULL) return false;
+    
     Node *run_tree = tree->root, *new_parents = NULL;
     while(run_tree != NULL) {
         new_parents = run_tree;
@@ -30,6 +31,7 @@ bool BinTree_insert(BinTree* tree, int key) {
             run_tree = run_tree->left;
         }else run_tree = run_tree->right;
     }
+
     new_node->parent = new_parents;
     if(new_parents == NULL) {
         tree->root = new_node;

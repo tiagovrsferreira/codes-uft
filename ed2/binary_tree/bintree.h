@@ -5,18 +5,18 @@
 typedef struct _no {
     int key;
     struct _no *left, *right, *parent;
-}TNo;
+}Node;
 
 typedef struct {
-    TNo* root;
+    Node* root;
 }BinTree;
 
 BinTree* BinTree_create();
 bool BinTree_insert(BinTree*, int);
-TNo* BinTree_search(TNo*, int);
-TNo* BinTree_search_r(TNo*, int);
-void BinTree_pre(TNo*);
-void BinTree_in(TNo*);
-void BinTree_pos(TNo*);
+Node* BinTree_search(Node*, int);
+Node* BinTree_search_r(Node*, int);
+void BinTree_pre(Node*);
+void BinTree_in(Node*);
+void BinTree_pos(Node*);
 
 #endif
