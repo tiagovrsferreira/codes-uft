@@ -3,21 +3,21 @@
 #include <stdlib.h>
 
 Node* Node_create(int key) {
-    Node* node = malloc(sizeof(Node));
-    if(node) {
-        node->key = key;
-        node->left = NULL;
-        node->right = NULL;
-        node->parent = NULL;
+    Node* new_node = malloc(sizeof(Node));
+    if(new_node) {
+        new_node->key = key;
+        new_node->left = NULL;
+        new_node->right = NULL;
+        new_node->parent = NULL;
     }
-    return node;
+    return new_node;
 }
 
 BinTree* BinTree_create() {
-    BinTree* tree = malloc(sizeof(BinTree));
-    if(tree)
-        tree->root = NULL;
-    return tree;
+    BinTree* new_tree = malloc(sizeof(BinTree));
+    if(new_tree)
+        new_tree->root = NULL;
+    return new_tree;
 }
 
 bool BinTree_insert(BinTree* tree, int key) {
