@@ -11,6 +11,7 @@ typedef struct {
     Node* root;
 }BinTree;
 
+
 BinTree* BinTree_create();
 bool BinTree_insert(BinTree*, int);
 Node* BinTree_search(Node*, int);
