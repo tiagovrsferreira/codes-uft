@@ -10,6 +10,7 @@ int main() {
     BinTree_insert(tree, 7);
     BinTree_insert(tree, 2);
     BinTree_insert(tree, -2);
+    BinTree_insert(tree, 8);
 
     puts("printing using pre-ordem: ");
     BinTree_pre(tree->root);
