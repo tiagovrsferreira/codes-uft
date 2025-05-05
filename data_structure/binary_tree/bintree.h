@@ -15,9 +15,8 @@ typedef struct {
 BinTree* BinTree_create();
 bool BinTree_insert(BinTree*, int);
 bool BinTree_delete(BinTree*, int);
-//TODO
-//bool BinTree_swap_node(BinTree*, BinTree*);
-//int BinTree_lowest(BinTree*);
+// bool BinTree_swap_node(BinTree*, Node*, Node*);
+// Node* BinTree_lowest(Node*);
 Node* BinTree_search(Node*, int);
 Node* BinTree_search_r(Node*, int);
 void BinTree_pre(Node*);
