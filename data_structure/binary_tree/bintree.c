@@ -46,6 +46,7 @@ bool BinTree_insert(BinTree* tree, int key) {
     return true;
 }
 
+
 bool BinTree_delete(BinTree* tree, int key) {
     Node* run_tree = tree->root;
     Node* parent = NULL;
