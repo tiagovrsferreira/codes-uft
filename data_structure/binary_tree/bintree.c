@@ -47,7 +47,7 @@ bool BinTree_insert(BinTree* tree, int key) {
 }
 
 //TODO
-bool BinTree_swap_node(BinTree* node1, BinTree* node2);
+bool BinTree_swap_node(BinTree* tree, Node* node1, Node* node2);
 
 Node* BinTree_lowest(Node* root) {
     Node* lowest = root->right;
