@@ -37,6 +37,17 @@ Node* Node_create(char key) {
     return new_node;
 }
 
+Tree* Tree_create(int left, int right, int key) {
+    Tree* new_tree = malloc(sizeof(Tree));
+    if(new_tree) {
+        new_tree->freq = key;
+        new_tree->left = left;
+        new_tree->right = right;
+    }
+    return new_tree;
+}
+
+
 bool List_add(List* list, char key) {
     Node* node = Node_create(key);
     if(!node) return false;
@@ -89,4 +100,24 @@ int getLessFreq(List* list) {
     int freq = less->freq;
     less->freq = NULL;
     return freq;
+}
+
+int getSizeList(List* list) {
+    int size = 0;
+    Node* run = list->root;
+    while(run != NULL) {
+        size++;
+        run = run->next;
+    }
+}
+Tree* Huffmantree_create(char string[]) {
+    List* list = List_create();
+    String_to_list(list, string);
+    int list_size = getSizeList(list);
+    Tree* sub_trees[] = {};
+    while(list_size > 0) {
+        if(list_size == 1) {
+            
+        }
+    }
 }
